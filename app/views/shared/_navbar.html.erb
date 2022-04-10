@@ -13,9 +13,7 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
+        <%= link_to 'Inicio', root_path, class: "navbar-item"%>
 
       <a class="navbar-item">
         Documentation
@@ -47,12 +45,15 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
+
+        
+            <% if user_signed_in? %>
+                <%= link_to "Log out", destroy_user_session_path, :method=>'delete', class:"button is-primary"%>
+            <% else %>
+                <%= link_to 'Soy nuevo!', new_user_registration_path, class:"button is-primary"%>
+                <%= link_to "Login", new_user_session_path, class:"button is-primary" %>
+            <% end %>
+        
         </div>
       </div>
     </div>
