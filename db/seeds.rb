@@ -31,3 +31,7 @@ los_rios =  Region.create(name: "Los Ríos", country: chile)
 los_lagos = Region.create(name: "Los Lagos", country: chile)
 aysen = Region.create(name: "Aysén", country: chile)
 magallanes_antartica = Region.create(name: "Magallanes y Antártica Chilena", country: chile)
+
+user1 = User.create(email: "correo@uno.cl", password: "123456")
+user2 = User.create(email: "correo@dos.cl", password: "123456", role: 1)
+user3 = AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
