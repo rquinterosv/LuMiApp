@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_10_013624) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_10_015903) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_10_013624) do
     t.index ["country_id"], name: "index_regions_on_country_id"
   end
 
+  create_table "routes", force: :cascade do |t|
+    t.bigint "country_id", null: false
+    t.bigint "region_id", null: false
+    t.string "location"
+    t.string "zone"
+    t.string "name"
+    t.integer "grade"
+    t.date "date"
+    t.integer "category"
+    t.string "lead_climbing"
+    t.string "observation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_routes_on_country_id"
+    t.index ["region_id"], name: "index_routes_on_region_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -41,4 +58,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_10_013624) do
   end
 
   add_foreign_key "regions", "countries"
+  add_foreign_key "routes", "countries"
+  add_foreign_key "routes", "regions"
 end
