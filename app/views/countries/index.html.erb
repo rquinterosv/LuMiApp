@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Countries</h1>
+<br>
+<div id="countries" class="columns is-mobile">
+  <% @countries.each do |country| %>
+    <div class="card">
+      <div class="card-content"%>
+        <%= render country %>
+        <p>
+          <%= link_to "Show this country", country, class:"button is-link is-light"%>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New country", new_country_path %>
+
+
