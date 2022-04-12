@@ -73,3 +73,4 @@ end
 
 gem "devise", "~> 4.8"
 gem 'activeadmin'
+gem 'sass-rails'
