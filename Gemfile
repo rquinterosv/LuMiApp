@@ -74,3 +74,6 @@ end
 gem "devise", "~> 4.8"
 gem 'activeadmin'
 gem 'sass-rails'
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth-google-oauth2'
