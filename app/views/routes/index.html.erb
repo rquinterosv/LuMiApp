@@ -2,13 +2,20 @@
 
 <h1>Routes</h1>
 
-<div id="routes">
-  <% @routes.each do |route| %>
-    <%= render route %>
-    <p>
-      <%= link_to "Show this route", route %>
-    </p>
-  <% end %>
+<div>
+  <div id="routes">
+    <%= render "form", route: @route%>
+  </div>
+ 
+  <div id="routes", class="columns">
+    <% @routes.each do |route| %>
+      <%= render route %>
+      <p>
+        <%= link_to "Show this route", route %>
+      </p>
+    <% end %>
+  </div>
+
 </div>
 
 <%= link_to "New route", new_route_path %>
