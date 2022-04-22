@@ -1,23 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Routes asdasd</h1>
+<%= Rails.env%>
 
-<div>
+<div class="container has-text-centered"> 
   <div id="routes">
     <%= render "form", route: @route%>
   </div>
- 
-  <div id="routes", class="columns">
+ <br>
+  <div id="routes" class="columns mt-5 is-8 is-variable">
     <% @routes.each do |route| %>
       <%= render route %>
-      <p>
-        <%= link_to "Show this route", route %>
-      </p>
     <% end %>
   </div>
+    
 
 </div>
 
-<%= link_to "New route", new_route_path %>
+<%#= link_to "New route", new_route_path %>
 
 

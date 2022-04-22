@@ -1,4 +1,4 @@
-<div id="<%= dom_id route %>">
+<div id="<%= dom_id route %>" class="column is-3-mobile is-3-tablet is-4-desktop">
   <p>
     <strong>Location:</strong>
     <%= route.location %>
@@ -48,5 +48,8 @@
     <strong>Region:</strong>
     <%= route.region_id %>
   </p>
-
+  
+  <p>
+    <%= link_to "Show this route", route %>
+  </p>
 </div>
