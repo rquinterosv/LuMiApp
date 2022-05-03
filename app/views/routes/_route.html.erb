@@ -1,140 +1,28 @@
 <div id="<%= dom_id route %>" class="column is-4">
-  <p>
-    <strong>Location:</strong>
-    <%= route.location %>
-  </p>
-
-  <p>
-    <strong>Zone:</strong>
-    <%= route.zone%>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
-    <%= route.name %>
-  </p>
-
-  <p>
-    <strong>Grade:</strong>
-    <%= route.grade %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= route.date %>
-  </p>
-
-  <p>
-    <strong>Category:</strong>
-    <%= route.category %>
-  </p>
-
-  <p>
-    <strong>Lead climbing:</strong>
-    <%= route.lead_climbing %>
-  </p>
-
-  <p>
-    <strong>Observation:</strong>
-    <%= route.observation %>
-  </p>
-
-  <p>
-    <strong>Country:</strong>
-    <%= route.country_id %>
-  </p>
-
-  <p>
-    <strong>Region:</strong>
-    <%= route.region_id %>
-  </p>
-  
-  <p>
-    <%= link_to "Show this route", route %>
-  </p>
-
   <br>
-</div>
+    <div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <%#= route.user.email%>
+          </div>
+        </div>
 
+        <div class="content">
+          <%= route.location%>
+          <%= route.zone%>
+          <%= route.name%>
+          <%= route.grade%>
 
-
-  		<div class="card">
-			<div class="card-content">
-				<div class="media">
-					<div class="media-left">
-						<figure class="image is-48x48">
-							<img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-						</figure>
-					</div>
-					<div class="media-content">
-						<p class="title is-4">John Smith</p>
-						<p class="subtitle is-6">@johnsmith</p>
-					</div>
-				</div>
-
-				<div class="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-					<a href="#">#css</a> <a href="#">#responsive</a>
-					<br>
-					<time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-				</div>
-			</div>
-		</div>
-
-    <div id="<%= dom_id route %>" class="column is-4">
-  <p>
-    <strong>Location:</strong>
-    <%= route.location %>
-  </p>
-
-  <p>
-    <strong>Zone:</strong>
-    <%= route.zone%>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
-    <%= route.name %>
-  </p>
-
-  <p>
-    <strong>Grade:</strong>
-    <%= route.grade %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= route.date %>
-  </p>
-
-  <p>
-    <strong>Category:</strong>
-    <%= route.category %>
-  </p>
-
-  <p>
-    <strong>Lead climbing:</strong>
-    <%= route.lead_climbing %>
-  </p>
-
-  <p>
-    <strong>Observation:</strong>
-    <%= route.observation %>
-  </p>
-
-  <p>
-    <strong>Country:</strong>
-    <%= route.country_id %>
-  </p>
-
-  <p>
-    <strong>Region:</strong>
-    <%= route.region_id %>
-  </p>
-  
-  <p>
-    <%= link_to "Show this route", route %>
-  </p>
-
+          <br>
+          <%= route.date%>
+        </div>
+      </div>
+    </div>
   <br>
 </div>

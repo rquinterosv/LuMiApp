@@ -35,3 +35,7 @@ magallanes_antartica = Region.create(name: "Magallanes y Antártica Chilena", co
 user1 = User.create(email: "correo@uno.cl", password: "123456")
 user2 = User.create(email: "correo@dos.cl", password: "123456", role: 1)
 user3 = AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+ruta1 = Route.create(location: "Chacabuco", zone: "Zona piola", name: "Cuatico", date: "01/01/2022")
+ruta2 = Route.create(location: "Chacabuco", zone: "Zona piola", name: "Patanes", date: "01/01/2022")
+ruta3 = Route.create(location: "Chacabuco", zone: "Zona piola", name: "Chaucha", date: "01/01/2022")

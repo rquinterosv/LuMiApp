@@ -12,55 +12,68 @@
   <% end %>
 
 
-  <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
+  <div class="columns">
+
+    <div class="column ">
+      <h1 class="title">Estos campos son obligatorios</h1>
+      <div>
+        <%= form.label :location, style: "display: block" %>
+        <%= form.text_field :location %>
+      </div>
+
+      <div>
+        <%= form.label :zone, style: "display: block" %>
+        <%= form.text_field :zone %>
+      </div>
+
+      <div>
+        <%= form.label :name, style: "display: block" %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div>
+        <%= form.label :grade, style: "display: block" %>
+        <%= form.number_field :grade %>
+      </div>
+
+      <div>
+        <%= form.label :date, style: "display: block" %>
+        <%= form.date_field :date %>
+      </div>
+
+    </div>
+
+    <div class="column">
+      <h1 class="title">Estos campos NO son obligatorios</h1>
+      <div>
+        <%= form.label :category, style: "display: block" %>
+        <%= form.number_field :category %>
+      </div>
+
+      <div>
+        <%= form.label :lead_climbing, style: "display: block" %>
+        <%= form.text_field :lead_climbing %>
+      </div>
+
+      <div>
+        <%= form.label :observation, style: "display: block" %>
+        <%= form.text_field :observation %>
+      </div>
+
+      <div>
+        <%= form.label :country_id, style: "display: block" %>
+        <%= form.select :country_id, Country.pluck(:name, :id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+
+      <div>
+        <%= form.label :region_id, style: "display: block" %>
+        <%= form.select :region_id, Region.pluck(:name, :id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+    </div>
+
+
   </div>
 
-  <div>
-    <%= form.label :zone, style: "display: block" %>
-    <%= form.text_field :zone %>
-  </div>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :grade, style: "display: block" %>
-    <%= form.number_field :grade %>
-  </div>
-
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date %>
-  </div>
-
-  <div>
-    <%= form.label :category, style: "display: block" %>
-    <%= form.number_field :category %>
-  </div>
-
-  <div>
-    <%= form.label :lead_climbing, style: "display: block" %>
-    <%= form.text_field :lead_climbing %>
-  </div>
-
-  <div>
-    <%= form.label :observation, style: "display: block" %>
-    <%= form.text_field :observation %>
-  </div>
-
-  <div>
-    <%= form.label :country_id, style: "display: block" %>
-    <%= form.select :country_id, Country.pluck(:name, :id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div>
-    <%= form.label :region_id, style: "display: block" %>
-    <%= form.select :region_id, Region.pluck(:name, :id), class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
 <br>
   <div>
     <%= form.submit class:"button is-dark" %>
