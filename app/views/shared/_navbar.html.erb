@@ -1,6 +1,10 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -10,9 +14,7 @@
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
         <%= link_to 'Inicio', root_path, class: "navbar-item"%>
-
         <%= link_to 'Dashboard', root_path, class: "navbar-item"%>
-
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -30,15 +32,12 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-
-        
             <% if user_signed_in? %>
                 <%= link_to "Log out", destroy_user_session_path, "data-turbo-method"=>'delete', class:"button is-primary"%>
             <% else %>
-                <%= link_to 'Soy nuevo!', new_user_registration_path, class:"button is-primary"%>
+                <%= link_to 'Soy nuevo!', new_user_registration_path, class:"button is-light"%>
                 <%= link_to "Login", new_user_session_path, class:"button is-primary" %>
             <% end %>
-        
         </div>
       </div>
     </div>
