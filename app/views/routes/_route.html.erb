@@ -9,7 +9,10 @@
             </figure>
           </div>
           <div class="media-content">
-            <%#= route.user.email%>
+          <%if route.user != nil%>
+          <%#unless route.user.nil?%>
+            <%= route.user.name%>
+          <%end%>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ class RoutesController < InheritedResources::Base
 
   def index 
     @route = Route.new
-    @routes = Route.all
+    @routes = Route.order("created_at DESC")
   end
 
   def create
