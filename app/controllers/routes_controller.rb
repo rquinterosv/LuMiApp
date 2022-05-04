@@ -7,6 +7,7 @@ class RoutesController < InheritedResources::Base
 
   def create
     @route = Route.new(route_params)
+    @route.user = current_user
     puts @route
     puts @route.name
     respond_to do |format|
