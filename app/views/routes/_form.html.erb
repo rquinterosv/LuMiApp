@@ -33,7 +33,8 @@
 
       <div>
         <%= form.label :grade, style: "display: block" %>
-        <%= form.number_field :grade %>
+<%= select_tag :grades, options_for_select(Route.grades) %>
+
       </div>
 
       <div>
